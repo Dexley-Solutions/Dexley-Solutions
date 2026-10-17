@@ -378,69 +378,6 @@
             </div>
         </section>
 
-        <!-- DIRECT INQUIRY SECTION (Connected to Web3Forms) -->
-        <section id="inquiry" class="py-16 sm:py-20 bg-slateBg">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-lg relative">
-                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy via-accentBlue to-gold rounded-t-2xl"></div>
-
-                    <div class="text-center mb-8">
-                        <span class="inline-block px-3 py-1 bg-gold/10 text-navy text-xs font-bold rounded-full uppercase tracking-wider mb-2 border border-gold/30">
-                            Contact Practice
-                        </span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy">Direct Inquiry</h2>
-                        <p class="text-xs sm:text-sm text-slate-600 mt-1">Submit your requirements directly to Dexley Solutions.</p>
-                    </div>
-
-                    <!-- Toast alert message -->
-                    <div id="form-toast" class="hidden mb-6 p-4 rounded-lg text-xs font-medium border"></div>
-
-                    <!-- WEB3FORMS FORM -->
-                    <form id="direct-inquiry-form" class="space-y-4">
-                        <!-- REPLACE YOUR WEB3FORMS ACCESS KEY BELOW -->
-                        <input type="hidden" name="access_key" value="c0ccc8d8-bd7b-40e4-a33a-b135e914a591">
-                        <input type="hidden" name="subject" value="New Inquiry - Dexley Solutions Website">
-
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 mb-1">Name / Organization *</label>
-                                <input type="text" name="name" required placeholder="Your Name or Business" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
-                                <input type="email" name="email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Practice Area of Interest *</label>
-                            <select name="practice_area" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy bg-white gold-border-glow">
-                                <option value="" disabled selected>Select Practice Area</option>
-                                <option value="KSA Compliance & ZATCA">KSA Compliance & ZATCA Phase 2</option>
-                                <option value="UK Corporate Tax & Compliance">UK Corporate Tax & Statutory Reporting</option>
-                                <option value="Full-Stack Bookkeeping">Full-Stack Bookkeeping & Accounting</option>
-                                <option value="Practice Support Partnership">Accounting Practice Support Partnership</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements *</label>
-                            <textarea name="message" rows="4" required placeholder="Provide brief details regarding your inquiry..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow"></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-bold py-3.5 rounded-lg shadow-md border-b-2 border-gold transition-all duration-200 text-sm flex items-center justify-center gap-2">
-                            <span>Submit Direct Inquiry</span>
-                            <i class="fa-solid fa-paper-plane text-gold"></i>
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
     <!-- FOOTER -->
     <footer class="bg-navy-dark text-white border-t border-slate-800 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
