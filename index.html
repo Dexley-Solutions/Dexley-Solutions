@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexley Solutions | Accounting & Financial Practice Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0d2538',
+                            dark: '#071624',
+                            light: '#163a57'
+                        },
+                        accentBlue: {
+                            DEFAULT: '#1f6fb2',
+                            light: '#eef6fc'
+                        },
+                        gold: {
+                            DEFAULT: '#c5a059',
+                            light: '#d4af37',
+                            soft: '#fbf7ee'
+                        },
+                        slateBg: '#f4f7fb'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-border-glow:focus-within {
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slateBg text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- ORIGINAL LOGO DESIGN (Deep Navy Box, White DS Text, No Gold on Logo) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-navy rounded-lg flex items-center justify-center font-bold text-white text-xl tracking-wider shadow-md">
+                        DS
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-extrabold tracking-wider text-navy leading-none">DEXLEY</span>
+                        <span class="text-xs font-semibold tracking-widest text-slate-600 leading-tight">SOLUTIONS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+                    <a href="#portfolio" class="hover:text-accentBlue transition-colors">Overview</a>
+                    <a href="#practice-areas" class="hover:text-accentBlue transition-colors">Practice Areas</a>
+                    <a href="#standards" class="hover:text-accentBlue transition-colors">Standards & Expertise</a>
+                    <a href="#tech-stack" class="hover:text-accentBlue transition-colors">Software Stack</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="#inquiry" class="bg-navy hover:bg-navy-light text-white font-medium text-sm px-5 py-2.5 rounded-lg shadow-sm border-b-2 border-gold transition-all duration-200 flex items-center gap-2">
+                        <span>Direct Inquiry</span>
+                        <i class="fa-solid fa-paper-plane text-xs text-gold"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-600 hover:text-navy focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#portfolio" class="block py-2 text-slate-700 font-medium hover:text-accentBlue">Overview</a>
+            <a href="#practice-areas" class="block py-2 text-slate-700 font-medium hover:text-accentBlue">Practice Areas</a>
+            <a href="#standards" class="block py-2 text-slate-700 font-medium hover:text-accentBlue">Standards & Expertise</a>
+            <a href="#tech-stack" class="block py-2 text-slate-700 font-medium hover:text-accentBlue">Software Stack</a>
+            <a href="#inquiry" class="block w-full text-center bg-navy text-white py-3 rounded-lg font-medium shadow-sm">
+                Direct Inquiry
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- PORTFOLIO HERO SECTION -->
+        <section id="portfolio" class="relative bg-navy text-white overflow-hidden py-16 lg:py-24">
+            <!-- Background Decorative Accents -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accentBlue/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-gold/40 text-gold text-xs font-semibold tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                            CORPORATE ACCOUNTING & COMPLIANCE PRACTICE
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Smart Accounting for a <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-gold">Smarter Future</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Dexley Solutions is a dedicated accounting and bookkeeping practice delivering structured financial management, UK compliance, and KSA regional tax reporting.
+                        </p>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#practice-areas" class="bg-gold hover:bg-gold-light text-navy font-bold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 text-base">
+                                Explore Practice Areas
+                                <i class="fa-solid fa-arrow-down text-sm"></i>
+                            </a>
+                            <a href="#inquiry" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-lg border border-white/20 transition-all duration-200 text-center text-base">
+                                Send Direct Inquiry
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Highlights Card -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-white/5 border border-white/15 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+                            <!-- Gold Accent Header Bar -->
+                            <div class="h-1.5 w-20 bg-gold rounded-full mb-6"></div>
+                            
+                            <h3 class="text-xl font-bold text-white mb-2">Practice Overview</h3>
+                            <p class="text-xs text-slate-300 mb-6">Cross-border accounting execution tailored for regional and international compliance.</p>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="bg-navy-dark/80 p-4 rounded-xl border border-white/10 flex items-start gap-3">
+                                    <div class="p-2.5 bg-accentBlue/20 text-gold rounded-lg">
+                                        <i class="fa-solid fa-certificate text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm">Rigorous Standards</h4>
+                                        <p class="text-xs text-slate-300 mt-0.5">ACCA & SOCPA aligned workflows for statutory reporting, ledger accuracy, and audit-ready accounts.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-navy-dark/80 p-4 rounded-xl border border-white/10 flex items-start gap-3">
+                                    <div class="p-2.5 bg-accentBlue/20 text-gold rounded-lg">
+                                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm">Regulatory Alignment</h4>
+                                        <p class="text-xs text-slate-300 mt-0.5">End-to-end alignment with ZATCA Phase 2 E-Invoicing (KSA) and HMRC MTD Corporate Tax (UK).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PRACTICE AREAS -->
+        <section id="practice-areas" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <div class="inline-block px-3 py-1 bg-gold/10 text-navy text-xs font-bold rounded-full uppercase tracking-wider mb-3 border border-gold/30">
+                        Capabilities & Practice Areas
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+                        Specialized Accounting Solutions
+                    </h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                        Structured practice areas supporting businesses, entities, and accounting firms.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Area 1: KSA Compliance -->
+                    <div class="bg-slateBg rounded-xl p-8 border border-slate-200 shadow-sm hover:border-gold/50 transition-all duration-200 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center text-xl mb-6 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-bold text-[11px] rounded mb-3">
+                                KSA REGION
+                            </span>
+                            <h3 class="text-xl font-bold text-navy mb-3">KSA Compliance & ZATCA</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Specialized implementation and maintenance of Saudi Arabian regulatory requirements and e-invoicing protocols.
+                            </p>
+                            <ul class="space-y-2.5 text-xs text-slate-700 border-t border-slate-200 pt-4 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> ZATCA Phase 2 E-Invoicing & Integration
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> KSA VAT Returns & Filing Alignment
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> SOCPA Financial Reporting Standards
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Area 2: UK Compliance -->
+                    <div class="bg-slateBg rounded-xl p-8 border border-slate-200 shadow-sm hover:border-gold/50 transition-all duration-200 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center text-xl mb-6 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <span class="inline-block px-2.5 py-0.5 bg-blue-100 text-blue-800 font-bold text-[11px] rounded mb-3">
+                                UK REGION
+                            </span>
+                            <h3 class="text-xl font-bold text-navy mb-3">UK Corporate Tax & Compliance</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                End-to-end statutory accounting and tax compliance services for UK entities and accounting practices.
+                            </p>
+                            <ul class="space-y-2.5 text-xs text-slate-700 border-t border-slate-200 pt-4 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> CT600 Corporation Tax Submissions
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> FRS 102 & FRS 105 Financial Statements
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> Making Tax Digital (MTD) VAT & Payroll
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Area 3: Full-Stack Bookkeeping -->
+                    <div class="bg-slateBg rounded-xl p-8 border border-slate-200 shadow-sm hover:border-gold/50 transition-all duration-200 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center text-xl mb-6 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <span class="inline-block px-2.5 py-0.5 bg-purple-100 text-purple-800 font-bold text-[11px] rounded mb-3">
+                                GLOBAL MANAGEMENT
+                            </span>
+                            <h3 class="text-xl font-bold text-navy mb-3">Full-Stack Bookkeeping</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Systematic day-to-day general ledger operations, account reconciliations, and reporting packages.
+                            </p>
+                            <ul class="space-y-2.5 text-xs text-slate-700 border-t border-slate-200 pt-4 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> Daily & Monthly Ledger Reconciliations
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> Management Accounts & KPI Dashboards
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-gold"></i> Cash Flow Analysis & Budget Forecasts
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- STANDARDS & CAPABILITIES PORTFOLIO -->
+        <section id="standards" class="py-16 sm:py-20 bg-slateBg border-t border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-block px-3 py-1 bg-navy text-white text-xs font-bold rounded-full uppercase tracking-wider border border-gold/30">
+                            Professional Framework
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+                            UK Financial Rigor Meets Regional Execution
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Dexley Solutions operates as a high-capacity financial partner. We combine standardized UK auditing/accounting rigor with local GCC/KSA compliance requirements to give organizations reliable financial clarity.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-navy/10 text-navy flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-sm text-navy"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy text-sm">Accuracy & Quality Control</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5">Multi-tier review process ensuring zero compliance errors before submission.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-navy/10 text-navy flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-sm text-navy"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy text-sm">Scalable Capacity Support</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5">Dedicated bandwidth for accounting practices facing peak-season tax filing workloads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <div class="bg-navy rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-bl-full pointer-events-none"></div>
+                            
+                            <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+                                Strategic Execution Pillars
+                            </h3>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <span class="text-2xl font-black text-gold">01</span>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Full Regulatory Tracking</h4>
+                                        <p class="text-xs text-slate-300 mt-1">Proactive updates aligned with evolving HMRC and ZATCA Phase 2 guidelines.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="text-2xl font-black text-gold">02</span>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Cloud Integration</h4>
+                                        <p class="text-xs text-slate-300 mt-1">Native operation across leading enterprise and regional cloud accounting software.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="text-2xl font-black text-gold">03</span>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Strict Confidentiality</h4>
+                                        <p class="text-xs text-slate-300 mt-1">Enterprise-grade encrypted workflows and strict NDA protections.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOFTWARE STACK SECTION -->
+        <section id="tech-stack" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <h2 class="text-2xl font-bold text-navy tracking-tight">Software & Technology Capabilities</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2">Proficient across major global and regional accounting platforms.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cloud text-accentBlue"></i> Xero
+                    </div>
+                    <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book text-emerald-600"></i> QuickBooks
+                    </div>
+                    <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-layer-group text-red-500"></i> Zoho Books
+                    </div>
+                    <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-invoice text-blue-600"></i> Qoyod
+                    </div>
+                    <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-boxes-stacked text-purple-600"></i> Daftra & Sage
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIRECT INQUIRY SECTION (Clean & Minimal - No placeholder info) -->
+        <section id="inquiry" class="py-16 sm:py-20 bg-slateBg">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-lg relative">
+                    <!-- Gold Top Border Accent -->
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy via-accentBlue to-gold rounded-t-2xl"></div>
+
+                    <div class="text-center mb-8">
+                        <span class="inline-block px-3 py-1 bg-gold/10 text-navy text-xs font-bold rounded-full uppercase tracking-wider mb-2 border border-gold/30">
+                            Contact Practice
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy">Direct Inquiry</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1">Submit your requirements directly to Dexley Solutions.</p>
+                    </div>
+
+                    <!-- Notification Feedback Toast -->
+                    <div id="form-toast" class="hidden mb-6 p-4 rounded-lg text-xs font-medium border"></div>
+
+                    <form id="direct-inquiry-form" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="inquiry_name" class="block text-xs font-semibold text-slate-700 mb-1">Name / Organization *</label>
+                                <input type="text" id="inquiry_name" required placeholder="Your Name or Business" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow">
+                            </div>
+                            <div>
+                                <label for="inquiry_email" class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" id="inquiry_email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="inquiry_area" class="block text-xs font-semibold text-slate-700 mb-1">Practice Area of Interest *</label>
+                            <select id="inquiry_area" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy bg-white gold-border-glow">
+                                <option value="" disabled selected>Select Practice Area</option>
+                                <option value="KSA Compliance & ZATCA">KSA Compliance & ZATCA Phase 2</option>
+                                <option value="UK Corporate Tax & Compliance">UK Corporate Tax & Statutory Reporting</option>
+                                <option value="Full-Stack Bookkeeping">Full-Stack Bookkeeping & Accounting</option>
+                                <option value="Practice Support Partnership">Accounting Practice Support Partnership</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="inquiry_message" class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements *</label>
+                            <textarea id="inquiry_message" rows="4" required placeholder="Provide brief details regarding your inquiry..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-bold py-3.5 rounded-lg shadow-md border-b-2 border-gold transition-all duration-200 text-sm flex items-center justify-center gap-2">
+                            <span>Submit Direct Inquiry</span>
+                            <i class="fa-solid fa-paper-plane text-gold"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-dark text-white border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                
+                <!-- Footer Branding -->
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center font-bold text-white text-base tracking-wider border border-white/20">
+                        DS
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold tracking-wider text-white leading-none">DEXLEY</span>
+                        <span class="text-[10px] font-semibold tracking-widest text-slate-400 leading-tight">SOLUTIONS</span>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-xs text-slate-400">
+                    &copy; Dexley Solutions. Smart Accounting for a Smarter Future.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-xl';
+            }
+        });
+
+        // Inline Feedback Helper (replaces alert)
+        function showToast(message, type) {
+            const toast = document.getElementById('form-toast');
+            toast.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'border-green-300', 'bg-red-100', 'text-red-800', 'border-red-300');
+            
+            if (type === 'success') {
+                toast.classList.add('bg-green-100', 'text-green-800', 'border-green-300');
+            } else {
+                toast.classList.add('bg-red-100', 'text-red-800', 'border-red-300');
+            }
+            
+            toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'} mr-1.5"></i> ${message}`;
+        }
+
+        // Form Submission Handler
+        document.getElementById('direct-inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Submitting...';
+
+            setTimeout(() => {
+                showToast('Thank you. Your direct inquiry has been recorded successfully.', 'success');
+                this.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Submit Direct Inquiry</span><i class="fa-solid fa-paper-plane text-gold"></i>';
+            }, 800);
+        });
+    </script>
+</body>
+</html>
