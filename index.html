@@ -395,64 +395,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- INTERACTIVE JAVASCRIPT & WEB3FORMS HANDLER -->
-    <script>
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if(mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = 'fa-solid fa-bars text-xl';
-            } else {
-                menuIcon.className = 'fa-solid fa-xmark text-xl';
-            }
-        });
-
-        function showToast(message, type) {
-            const toast = document.getElementById('form-toast');
-            toast.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'border-green-300', 'bg-red-100', 'text-red-800', 'border-red-300');
-            
-            if (type === 'success') {
-                toast.classList.add('bg-green-100', 'text-green-800', 'border-green-300');
-            } else {
-                toast.classList.add('bg-red-100', 'text-red-800', 'border-red-300');
-            }
-            
-            toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'} mr-1.5"></i> ${message}`;
-        }
-
-        document.getElementById('direct-inquiry-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('submit-btn');
-            const formData = new FormData(this);
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Submitting...';
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    showToast('Thank you! Your direct inquiry has been sent to our inbox successfully.', 'success');
-                    this.reset();
-                } else {
-                    showToast(json.message || 'Something went wrong. Please try again.', 'error');
-                }
-            })
-            .catch(() => {
-                showToast('Submission failed. Please check your internet connection.', 'error');
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>Submit Direct Inquiry</span><i class="fa-solid fa-paper-plane text-gold"></i>';
-            });
-        });
     </script>
 </body>
 </html>
