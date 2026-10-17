@@ -52,7 +52,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
-                <!-- ORIGINAL LOGO DESIGN (Deep Navy Box, White DS Text, No Gold on Logo) -->
+                <!-- LOGO -->
                 <a href="#" class="flex items-center gap-3 group">
                     <div class="w-11 h-11 bg-navy rounded-lg flex items-center justify-center font-bold text-white text-xl tracking-wider shadow-md">
                         DS
@@ -104,7 +104,6 @@
 
         <!-- PORTFOLIO HERO SECTION -->
         <section id="portfolio" class="relative bg-navy text-white overflow-hidden py-16 lg:py-24">
-            <!-- Background Decorative Accents -->
             <div class="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accentBlue/20 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -126,7 +125,7 @@
                         </p>
 
                         <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#practice-areas" class="bg-gold hover:bg-gold-light text-navy font-bold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 text-base">
+                            <a href="#practice-areas" class="bg-gold hover:bg-gold-light text-navy font-bold px-7 py-3.5 rounded-lg shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base">
                                 Explore Practice Areas
                                 <i class="fa-solid fa-arrow-down text-sm"></i>
                             </a>
@@ -139,7 +138,6 @@
                     <!-- Portfolio Highlights Card -->
                     <div class="lg:col-span-5">
                         <div class="bg-white/5 border border-white/15 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl relative">
-                            <!-- Gold Accent Header Bar -->
                             <div class="h-1.5 w-20 bg-gold rounded-full mb-6"></div>
                             
                             <h3 class="text-xl font-bold text-white mb-2">Practice Overview</h3>
@@ -152,7 +150,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-white text-sm">Rigorous Standards</h4>
-                                        <p class="text-xs text-slate-300 mt-0.5">ACCA & SOCPA aligned workflows for statutory reporting, ledger accuracy, and audit-ready accounts.</p>
+                                        <p class="text-xs text-slate-300 mt-0.5">ACCA aligned workflows for statutory reporting and ledger accuracy.</p>
                                     </div>
                                 </div>
 
@@ -184,9 +182,6 @@
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
                         Specialized Accounting Solutions
                     </h2>
-                    <p class="text-slate-600 mt-3 text-sm sm:text-base">
-                        Structured practice areas supporting businesses, entities, and accounting firms.
-                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -276,7 +271,7 @@
             </div>
         </section>
 
-        <!-- STANDARDS & CAPABILITIES PORTFOLIO -->
+        <!-- STANDARDS & STRATEGIC EXECUTION PILLARS -->
         <section id="standards" class="py-16 sm:py-20 bg-slateBg border-t border-b border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
@@ -374,21 +369,20 @@
                         <i class="fa-solid fa-layer-group text-red-500"></i> Zoho Books
                     </div>
                     <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-file-invoice text-blue-600"></i> Qoyod
+                        <i class="fa-solid fa-file-invoice text-blue-600"></i> Excel
                     </div>
                     <div class="p-4 rounded-xl bg-slateBg border border-slate-200 text-center font-bold text-navy text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-boxes-stacked text-purple-600"></i> Daftra & Sage
+                        <i class="fa-solid fa-boxes-stacked text-purple-600"></i> Sage
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- DIRECT INQUIRY SECTION (Clean & Minimal - No placeholder info) -->
+        <!-- DIRECT INQUIRY SECTION (Connected to Web3Forms) -->
         <section id="inquiry" class="py-16 sm:py-20 bg-slateBg">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-lg relative">
-                    <!-- Gold Top Border Accent -->
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy via-accentBlue to-gold rounded-t-2xl"></div>
 
                     <div class="text-center mb-8">
@@ -399,24 +393,29 @@
                         <p class="text-xs sm:text-sm text-slate-600 mt-1">Submit your requirements directly to Dexley Solutions.</p>
                     </div>
 
-                    <!-- Notification Feedback Toast -->
+                    <!-- Toast alert message -->
                     <div id="form-toast" class="hidden mb-6 p-4 rounded-lg text-xs font-medium border"></div>
 
+                    <!-- WEB3FORMS FORM -->
                     <form id="direct-inquiry-form" class="space-y-4">
+                        <!-- REPLACE YOUR WEB3FORMS ACCESS KEY BELOW -->
+                        <input type="hidden" name="access_key" value="c0ccc8d8-bd7b-40e4-a33a-b135e914a591">
+                        <input type="hidden" name="subject" value="New Inquiry - Dexley Solutions Website">
+
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
-                                <label for="inquiry_name" class="block text-xs font-semibold text-slate-700 mb-1">Name / Organization *</label>
-                                <input type="text" id="inquiry_name" required placeholder="Your Name or Business" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow">
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Name / Organization *</label>
+                                <input type="text" name="name" required placeholder="Your Name or Business" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow">
                             </div>
                             <div>
-                                <label for="inquiry_email" class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
-                                <input type="email" id="inquiry_email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow">
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" name="email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow">
                             </div>
                         </div>
 
                         <div>
-                            <label for="inquiry_area" class="block text-xs font-semibold text-slate-700 mb-1">Practice Area of Interest *</label>
-                            <select id="inquiry_area" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy bg-white gold-border-glow">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Practice Area of Interest *</label>
+                            <select name="practice_area" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy bg-white gold-border-glow">
                                 <option value="" disabled selected>Select Practice Area</option>
                                 <option value="KSA Compliance & ZATCA">KSA Compliance & ZATCA Phase 2</option>
                                 <option value="UK Corporate Tax & Compliance">UK Corporate Tax & Statutory Reporting</option>
@@ -426,8 +425,8 @@
                         </div>
 
                         <div>
-                            <label for="inquiry_message" class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements *</label>
-                            <textarea id="inquiry_message" rows="4" required placeholder="Provide brief details regarding your inquiry..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy gold-border-glow"></textarea>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements *</label>
+                            <textarea name="message" rows="4" required placeholder="Provide brief details regarding your inquiry..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm outline-none focus:border-navy gold-border-glow"></textarea>
                         </div>
 
                         <button type="submit" id="submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-bold py-3.5 rounded-lg shadow-md border-b-2 border-gold transition-all duration-200 text-sm flex items-center justify-center gap-2">
@@ -444,32 +443,24 @@
 
     <!-- FOOTER -->
     <footer class="bg-navy-dark text-white border-t border-slate-800 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
-                
-                <!-- Footer Branding -->
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center font-bold text-white text-base tracking-wider border border-white/20">
-                        DS
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-base font-extrabold tracking-wider text-white leading-none">DEXLEY</span>
-                        <span class="text-[10px] font-semibold tracking-widest text-slate-400 leading-tight">SOLUTIONS</span>
-                    </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center font-bold text-white text-base tracking-wider border border-white/20">
+                    DS
                 </div>
-
-                <!-- Copyright -->
-                <div class="text-xs text-slate-400">
-                    &copy; Dexley Solutions. Smart Accounting for a Smarter Future.
+                <div class="flex flex-col">
+                    <span class="text-base font-extrabold tracking-wider text-white leading-none">DEXLEY</span>
+                    <span class="text-[10px] font-semibold tracking-widest text-slate-400 leading-tight">SOLUTIONS</span>
                 </div>
-
+            </div>
+            <div class="text-xs text-slate-400">
+                &copy; Dexley Solutions. Smart Accounting for a Smarter Future.
             </div>
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT -->
+    <!-- INTERACTIVE JAVASCRIPT & WEB3FORMS HANDLER -->
     <script>
-        // Mobile Navigation Toggle
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -483,7 +474,6 @@
             }
         });
 
-        // Inline Feedback Helper (replaces alert)
         function showToast(message, type) {
             const toast = document.getElementById('form-toast');
             toast.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'border-green-300', 'bg-red-100', 'text-red-800', 'border-red-300');
@@ -497,20 +487,34 @@
             toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'} mr-1.5"></i> ${message}`;
         }
 
-        // Form Submission Handler
         document.getElementById('direct-inquiry-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const submitBtn = document.getElementById('submit-btn');
+            const formData = new FormData(this);
             
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Submitting...';
 
-            setTimeout(() => {
-                showToast('Thank you. Your direct inquiry has been recorded successfully.', 'success');
-                this.reset();
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    showToast('Thank you! Your direct inquiry has been sent to our inbox successfully.', 'success');
+                    this.reset();
+                } else {
+                    showToast(json.message || 'Something went wrong. Please try again.', 'error');
+                }
+            })
+            .catch(() => {
+                showToast('Submission failed. Please check your internet connection.', 'error');
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<span>Submit Direct Inquiry</span><i class="fa-solid fa-paper-plane text-gold"></i>';
-            }, 800);
+            });
         });
     </script>
 </body>
